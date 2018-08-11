@@ -1,22 +1,22 @@
-# vue-tree
+# vue-tree-example
 
-[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/lolitaframework/vue-tree/master/LICENSE)
+[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/lolitaframework/vue-tree-example/master/LICENSE)
 
 VueJS component for rendering the tree with custom data.
 
 ## Install
-`yarn add vue-tree`
+`yarn add vue-tree-example`
 or
-`npm install --save vue-tree`
+`npm install --save vue-tree-example`
 
 ## Usage
 ### Basic example
 ```javascript
 <script>
-import VueTree from './vue-tree';
+import VueTreeExample from 'vue-tree-example';
 export default {
   components: {
-    VueTree,
+    VueTreeExample,
   },
   data() {
     return {
@@ -55,8 +55,8 @@ export default {
 
 <template>
     <div>
-      Here will be vue-tree
-      <VueTree :model="model"></VueTree>
+      Here will be vue-tree-example
+      <VueTreeExample :model="model"></VueTreeExample>
     </div>
 </template>
 ```

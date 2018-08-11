@@ -1,5 +1,5 @@
 // Import vue component
-import component from './vue-tree.vue';
+import component from './vue-tree-example.vue';
 
 // install function executed by Vue.use()
 export function install(Vue) {

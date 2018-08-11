@@ -1,6 +1,6 @@
 <script>
 export default {
-  name: 'VueTree',
+  name: 'VueTreeExample',
   props: {
     model: Object,
     prepareFolderNameFunc: {

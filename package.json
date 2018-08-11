@@ -1,18 +1,18 @@
 {
-  "name": "vue-tree",
+  "name": "vue-tree-example",
   "version": "1.0.0",
   "description": "",
-  "main": "dist/vue-tree.umd.js",
-  "module": "dist/vue-tree.esm.js",
-  "unpkg": "dist/vue-tree.min.js",
+  "main": "dist/vue-tree-example.umd.js",
+  "module": "dist/vue-tree-example.esm.js",
+  "unpkg": "dist/vue-tree-example.min.js",
   "browser": {
-    "./sfc": "src/vue-tree.vue"
+    "./sfc": "src/vue-tree-example.vue"
   },
   "scripts": {
     "build": "npm run build:unpkg & npm run build:es & npm run build:umd",
-    "build:umd": "rollup --config build/rollup.config.js --format umd --file dist/vue-tree.umd.js",
-    "build:es": "rollup --config build/rollup.config.js --format es --file dist/vue-tree.esm.js",
-    "build:unpkg": "rollup --config build/rollup.config.js --format iife --file dist/vue-tree.min.js"
+    "build:umd": "rollup --config build/rollup.config.js --format umd --file dist/vue-tree-example.umd.js",
+    "build:es": "rollup --config build/rollup.config.js --format es --file dist/vue-tree-example.esm.js",
+    "build:unpkg": "rollup --config build/rollup.config.js --format iife --file dist/vue-tree-example.min.js"
   },
   "dependencies": {},
   "devDependencies": {
@@ -28,7 +28,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/lolitaframework/vue-tree.git"
+    "url": "git+https://github.com/lolitaframework/vue-tree-example.git"
   },
   "keywords": [
     "Vue",
