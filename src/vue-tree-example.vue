@@ -43,12 +43,12 @@ export default {
     </div>
 
     <ul v-show="open" v-if="isFolder">
-      <VueTree
+      <VueTreeExample
         class="item"
         v-for="(model, index) in model.children"
         :key="index"
         :model="model"
-        :prepareFolderNameFunc="prepareFolderNameFunc"></VueTree>
+        :prepareFolderNameFunc="prepareFolderNameFunc"></VueTreeExample>
     </ul>
   </li>
 </template>
