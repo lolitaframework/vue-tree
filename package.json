@@ -23,5 +23,18 @@
     "rollup-plugin-vue": "^3.0.0",
     "vue": "^2.5.16",
     "vue-template-compiler": "^2.5.17"
-  }
+  },
+  "author": "Eugen Guriev <gurievcreative@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lolitaframework/vue-tree.git"
+  },
+  "keywords": [
+    "Vue",
+    "VueJS",
+    "Tree",
+    "Simple"
+  ]
 }
+
