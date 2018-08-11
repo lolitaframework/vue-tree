@@ -5,7 +5,7 @@ import component from './vue-tree-example.vue';
 export function install(Vue) {
 	if (install.installed) return;
 	install.installed = true;
-	Vue.component('VueTree', component);
+	Vue.component('VueTreeExample', component);
 }
 
 // Create module definition for Vue.use()
