@@ -20,7 +20,11 @@ export default {
       return this.model.children && this.model.children.length;
     },
     cssClass() {
-      return this.model.class ? this.model.class : {};
+      let cssClasses = this.model.class ? this.model.class : {};
+      if (this.isFolder) {
+        return Object.assign(cssClasses, {'is-open' : this.open });
+      }
+      return cssClasses;
     },
   },
   methods: {
@@ -43,9 +47,9 @@ export default {
     <div
       v-if="isFolder"
       @click="toggle"
+      v-html="prepareFolderNameFunc(model.name, open)"
       :class="cssClass"
       class="folder">
-      {{ prepareFolderNameFunc(model.name, open) }}
     </div>
 
     <ul v-show="open" v-if="isFolder">

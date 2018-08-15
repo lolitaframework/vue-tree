@@ -1,5 +1,5 @@
 (function(){ if(typeof document !== 'undefined'){ var head=document.head||document.getElementsByTagName('head')[0], style=document.createElement('style'), css=" /*# sourceMappingURL=vue-tree-example.vue.map */"; style.type='text/css'; if (style.styleSheet){ style.styleSheet.cssText = css; } else { style.appendChild(document.createTextNode(css)); } head.appendChild(style); } })();
-var component = {render: function(){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('li',[(!_vm.isFolder)?_c('div',{class:_vm.cssClass,domProps:{"innerHTML":_vm._s(_vm.model.name)}}):_vm._e(),_vm._v(" "),(_vm.isFolder)?_c('div',{staticClass:"folder",class:_vm.cssClass,on:{"click":_vm.toggle}},[_vm._v(" "+_vm._s(_vm.prepareFolderNameFunc(_vm.model.name, _vm.open))+" ")]):_vm._e(),_vm._v(" "),(_vm.isFolder)?_c('ul',{directives:[{name:"show",rawName:"v-show",value:(_vm.open),expression:"open"}]},_vm._l((_vm.model.children),function(model,index){return _c('VueTreeExample',{key:index,staticClass:"item",attrs:{"model":model,"prepareFolderNameFunc":_vm.prepareFolderNameFunc}})})):_vm._e()])},staticRenderFns: [],_scopeId: 'data-v-53b1f5fb',
+var component = {render: function(){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('li',[(!_vm.isFolder)?_c('div',{class:_vm.cssClass,domProps:{"innerHTML":_vm._s(_vm.model.name)}}):_vm._e(),_vm._v(" "),(_vm.isFolder)?_c('div',{staticClass:"folder",class:_vm.cssClass,domProps:{"innerHTML":_vm._s(_vm.prepareFolderNameFunc(_vm.model.name, _vm.open))},on:{"click":_vm.toggle}}):_vm._e(),_vm._v(" "),(_vm.isFolder)?_c('ul',{directives:[{name:"show",rawName:"v-show",value:(_vm.open),expression:"open"}]},_vm._l((_vm.model.children),function(model,index){return _c('VueTreeExample',{key:index,staticClass:"item",attrs:{"model":model,"prepareFolderNameFunc":_vm.prepareFolderNameFunc}})})):_vm._e()])},staticRenderFns: [],_scopeId: 'data-v-53b1f5fb',
   name: 'VueTreeExample',
   props: {
     model: Object,
@@ -20,7 +20,11 @@ var component = {render: function(){var _vm=this;var _h=_vm.$createElement;var _
       return this.model.children && this.model.children.length;
     },
     cssClass: function cssClass() {
-      return this.model.class ? this.model.class : {};
+      var cssClasses = this.model.class ? this.model.class : {};
+      if (this.isFolder) {
+        return Object.assign(cssClasses, {'is-open' : this.open });
+      }
+      return cssClasses;
     },
   },
   methods: {
