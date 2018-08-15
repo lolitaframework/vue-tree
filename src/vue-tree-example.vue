@@ -19,6 +19,9 @@ export default {
     isFolder() {
       return this.model.children && this.model.children.length;
     },
+    cssClass() {
+      return this.model.class ? this.model.class : {};
+    },
   },
   methods: {
     toggle() {
@@ -32,13 +35,16 @@ export default {
 
 <template>
   <li>
-    <div v-if="!isFolder">
-      {{ model.name }}
+    <div
+      :class="cssClass"
+      v-if="!isFolder"
+      v-html="model.name">
     </div>
     <div
       v-if="isFolder"
       @click="toggle"
-      class="bold">
+      :class="cssClass"
+      class="folder">
       {{ prepareFolderNameFunc(model.name, open) }}
     </div>
 
