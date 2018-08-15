@@ -25,7 +25,7 @@ export default {
             name: 'wat',
           },
           {
-            name: 'child folder',
+            name: 'child folder have',
             children: [
               {
                 name: 'child folder',

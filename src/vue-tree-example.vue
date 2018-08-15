@@ -19,10 +19,22 @@ export default {
     isFolder() {
       return this.model.children && this.model.children.length;
     },
+    isFirstChildrenFolder() {
+      if (this.model.children instanceof Array && this.model.children.length) {
+        return this.model.children[0].children instanceof Array && this.model.children[0].children.length;
+      }
+      return false;
+    },
     cssClass() {
       let cssClasses = this.model.class ? this.model.class : {};
       if (this.isFolder) {
-        return Object.assign(cssClasses, {'is-open' : this.open });
+        return Object.assign(
+          cssClasses,
+          {
+            'is-open': this.open,
+            'first-children-is-folder': this.isFirstChildrenFolder,
+          }
+        );
       }
       return cssClasses;
     },
